@@ -37,3 +37,16 @@ nav {
 .nav__link--list {
     display: flex;
 }
+
+.nav__link--anchor {
+    margin: 0 12px;          /* 0 = top button kein abstand, 12px rechts und links*/
+    color: #242424;
+    text-decoration: none;  /* text decoration one, removes the underline*/
+    font-weight: 700;
+}
+
+.nav__link--anchor-primary {
+    background-color: #6030b1;
+    padding: 8px 20px;
+    border-radius: 50%;
+}
