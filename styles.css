@@ -27,7 +27,7 @@ li {
 }
 
 .flex {
-    display: flex;              /* makes the "childs" from flex 1 unten
+    disqaplay: flex;              /* makes the "childs" from flex 1 unten
                                   auch entire height*/
 }
 
@@ -174,6 +174,13 @@ flex-direction: column;
 .language__img {
     width: 100%;
     max-width: 100px;
+    transition: all 300ms;
+}
+
+.language__img:hover {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
 }
 
 .language__img--wrapper {
@@ -188,3 +195,22 @@ flex-direction: column;
     display: flex;
     flex-wrap: wrap;
 }
+
+.language__name {          /* sorgt dafür, dass der span tag mit*/
+    position: absolute;    /* der language bezeichnung unter dem logo */
+}                          /* zn. HTML nicht innherhalb des parents, also */
+                           /* im Logo selbst ist, sonder außerhalb*/
+
+/* diese sachen , kommen eigentlich in die gleichnamigen css oberhalb
+aber für ein besseres verständnis der reihenfolge habe ich sie sozusagen
+doppelt drunter gemacht*/
+
+.language {
+    display: flex;             /* ordnet das ganze mittig*/
+    justify-content: center;   /*   das auch  */
+    position: relative;        /* ist wichtig, damit das folgende */
+}                              /* bottom: 0 unterhalb des icons ist */
+
+.language__name {
+    bottom: 0;                 /* macht den html text unterhalb des icons  */
+}                   
