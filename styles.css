@@ -27,7 +27,7 @@ li {
 }
 
 .flex {
-    disqaplay: flex;              /* makes the "childs" from flex 1 unten
+    display: flex;              /* makes the "childs" from flex 1 unten
                                   auch entire height*/
 }
 
@@ -212,5 +212,19 @@ doppelt drunter gemacht*/
 }                              /* bottom: 0 unterhalb des icons ist */
 
 .language__name {
-    bottom: 0;                 /* macht den html text unterhalb des icons  */
-}                   
+    position: absolute;
+    bottom: 0;                  /* macht den html text unterhalb des icons  */
+    transform: scale(0);        /* der text verschwindet, damit er erst*/
+    transition: all 300ms;      /* wieder beim hovern auftaucht*/
+
+}  
+
+.language:hover .language__name {  /* wir hovern über .language und mit dem zweiten */ 
+    transform: scale(1);           /* .language__name targeten wir die */
+}                                   /* transform scale(0) */
+
+.language:hover .language__img {    /* eigentlich müsste ich den */
+    filter: brightness(80%);        /* .language__img:hover hierzu ändern*/ 
+    opacity: 0.86;                  /* ist jetzt also doppelt gemoopelt*/ 
+    transform: scale(0.9);          /* das erweitert den start des hover effekts*/
+}                                   /* auf den größeren parent */
